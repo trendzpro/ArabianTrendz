@@ -1,0 +1,668 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF; /* White background */
+  color: #353535; /* Dark gray text */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensures the page fills the screen */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #1a2238; /* Dark blue */
+  color: #FFFFFF; /* White text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  max-height: 65px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #FFFFFF; /* White links */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff6a3d; /* Vibrant orange */
+  border-bottom: 2px solid #ff6a3d; /* Orange underline */
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #FFFFFF; /* White underline */
+}
+
+/* Hero Section */
+.hero {
+  position: relative; /* Ensure the video stays in the background */
+  text-align: center;
+  padding: 100px 20px;
+  color: #ffffff; /* White text */
+  height: 100%; /* Ensure the hero section fills the viewport */
+  overflow: hidden; /* Hide anything that overflows the container */
+}
+
+/* Video Background */
+.video-background {
+  position: absolute; /* Position the video in the background */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the video takes up full width of the container */
+  height: 100%; /* Ensure the video takes up full height of the container */
+  object-fit: contain; /* Ensures the video fits within the container without cropping */
+  z-index: -1; /* Puts the video behind the content */
+  background-color: #000000; /* Ensure background color shows in case the video fails to load */
+}
+
+/* Hero Text */
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 35px;
+  font-weight: 400;
+}
+
+.hero .btn-primary {
+  background-color: #ff6a3d; /* Vibrant orange for buttons */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+  background-color: #f4db7d; /* Light golden yellow on hover */
+  color: #1a2238; /* Dark blue text */
+}
+
+.hero .btn-primary:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section */
+.about {
+  background-color: #ffffff; /* White background */
+  border-top: 5px solid #ff6a3d; /* Orange accent line */
+  padding: 60px 20px;
+  text-align: center;
+  color: #1a2238; /* Dark blue */
+}
+
+.about h1 {
+  color: #ff6a3d; /* Vibrant orange */
+}
+
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .student-grid {
+      grid-template-columns: 1fr; /* Change to one column on smaller screens */
+  }
+}
+.student-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.student-card h3 {
+    margin: 10px 0;
+}
+
+.student-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+.student-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
+}
+.highlight {
+  font-weight: bold;
+}
+
+/* product */
+.products h2{
+  margin-left: 1.2rem;
+  font-size: 35px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin:  10px 0;
+}
+
+.product-card p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.product-card button {
+  margin-top: 10px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
+}
+/* Button Styles */
+.btn-buy {
+    background-color: #ff6a3d; /* Vibrant orange */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #ff4a1d; /* Darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.btn-buy:active {
+    transform: scale(0.95); /* Slightly shrink the button when clicked */
+}
+/* Summary Section Styles */
+.summary {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #353535; /* Dark gray text */
+}
+
+.summary h1 {
+    font-size: 2.5rem;
+    color: #1a2238; /* Dark blue */
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Animation */
+}
+
+.summary h2 {
+    font-size: 1.5rem;
+    color: #ff6a3d; /* Vibrant orange */
+    margin-top: 20px;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Animation */
+}
+
+.summary p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slide in from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
+
+/* Delay animations for each element */
+.summary h1 {
+    animation-delay: 0.2s;
+}
+
+.summary h2 {
+    animation-delay: 0.4s;
+}
+
+.summary p {
+    animation-delay: 0.6s;
+}/* Summary Section Styles */
+.summary {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #353535; /* Dark gray text */
+}
+
+.summary h1 {
+    font-size: 2.5rem;
+    color: #1a2238; /* Dark blue */
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Animation */
+}
+
+.summary h2 {
+    font-size: 1.5rem;
+    color: #ff6a3d; /* Vibrant orange */
+    margin-top: 20px;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Animation */
+}
+
+.summary p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Animation */
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a2238; /* Dark blue */
+    color: white;
+}
+
+.footer .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slide in from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
+
+/* Delay animations for each element */
+.summary h1 {
+    animation-delay: 0.2s;
+}
+
+.summary h2 {
+    animation-delay: 0.4s;
+}
+
+.summary p {
+    animation-delay: 0.6s;
+}
+/* contact styl */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  margin-right: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  color: #1a2238; /* Dark blue */
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.detail {
+  margin-bottom: 20px;
+}
+
+.detail h2 {
+  font-size: 1.5rem;
+  color: #1a2238;
+}
+
+.detail p {
+  font-size: 1rem;
+  color: #555; /* Dark gray */
+}
+
+.contact-form {
+  flex: 1;
+  animation: slideIn 1s ease-in-out;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  color: #1a2238;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 150px;
+}
+
+.btn-primary {
+  background-color: #1a2238; /* Dark blue */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0d1624; /* Darker blue on hover */
+}
+.success-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb; /* Green border */
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Footer Styles */
+.footer {
+  margin: 0;
+  padding: 20px;
+  background-color: #1a2238; /* Dark blue background */
+  color: #ffffff; /* White text */
+  text-align: center;
+}
+/* Footer */
+body {
+    margin: 0; /* Remove default margin from body */
+    padding: 0; /* Remove default padding from body */
+}
+
+.footer {
+    margin: 0; /* Remove any margin */
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #1a2238; /* Dark blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    /* position: relative; Ensure it stays within the flow of the document */
+}
+
+.footer .social-icons a {
+  margin: 0 5px;
+}
+
+.footer .social-icons img {
+  width: 24px;
+  transition: transform 0.2s;
+}
+
+.footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero .btn-primary {
+    font-size: 0.9rem;
+    padding: 12px 25px;
+  }
+  .contact {
+    flex-direction: column; /* Stack contact info and form vertically */
+    padding: 20px; /* Reduce padding */
+}
+
+.contact-info {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 20px; /* Add space between sections */
+}
+
+.contact-info h1 {
+    font-size: 2rem; /* Decrease font size */
+}
+
+.contact-info p {
+    font-size: 1rem; /* Decrease font size */
+}
+
+.contact-form h2 {
+    font-size: 1.5rem; /* Decrease font size */
+}
+
+.form-group label {
+    font-size: 0.9rem; /* Decrease label font size */
+}
+
+input, textarea {
+    font-size: 0.9rem; /* Decrease input and textarea font size */
+}
+
+.btn-primary {
+    padding: 10px; /* Adjust button padding */
+    font-size: 0.9rem; /* Decrease button font size */
+}
+}
+
+/* For mobile phones */
+@media screen and (max-width: 450px) {
+  *{
+    margin: 0px;
+    padding: 10;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  header {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: row; /* Ensure items are in a row */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: space-between; 
+  }
+  .navbar ul {
+    display: flex; /* Ensure the list is displayed as flex */
+    flex-wrap: wrap; /* Allow wrapping of list items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullet points */
+}
+
+.navbar li {
+    flex: 1 0 30%; /* Allow each item to take up to 30% of the row */
+    text-align: center; /* Center align text */
+    margin-bottom: 10px; /* Add some space between rows */
+}
+
+.navbar a {
+    display: block; /* Make links block elements to fill the li */
+    padding: 10px; /* Add padding for better touch targets */
+}
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn-primary {
+    font-size: 0.85rem;
+    padding: 12px 20px;
+  }
+
+  .about {
+    padding: 40px 15px;
+  }
+  .contact {
+    padding: 10px; /* Further reduce padding */
+}
+
+.contact-info h1 {
+    font-size: 1.8rem; /* Further decrease font size */
+}
+
+.contact-info p,
+.contact-form h2,
+.form-group label,
+input, textarea,
+.btn-primary {
+    font-size: 0.85rem; /* Further decrease font size */
+}
+
+.form-group {
+    margin-bottom: 10px; /* Reduce space between form fields */
+}
+  .footer {
+    padding: 15px;
+  }
+}
