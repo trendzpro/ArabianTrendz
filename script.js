@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // code for buy
 function buyProduct(productName, productPrice) {
-    alert(`You have purchased ${productName} for $${productPrice}.`);
+    alert(`You have purchased ${productName} for ${productPrice} SAR.`);
 }
 // code for thank u noti...
 document.getElementById('contactForm').addEventListener('submit', function(event) {
